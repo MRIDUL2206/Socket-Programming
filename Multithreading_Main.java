@@ -8,5 +8,7 @@ public class Multithreading_Main {
         t1.start();
         t2.start();
         t3.start();
+
+        // here even if one of the threads or the main file gives a runtime error , th other threads still continue to execute untill completion
     }
 }
