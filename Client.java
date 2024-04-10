@@ -26,7 +26,10 @@ public class Client {
 	}
 
 	public static void main(String args[]){
-		Client client = new Client("127.0.0.1", 3999);
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the IP address of the server: ");
+		String ip_server = scanner.nextLine();
+		Client client = new Client(ip_server, 3999);
 		
 		Sender s1=new Sender(client.socket);
 		reciever r1=new reciever(client.socket);
