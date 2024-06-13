@@ -17,7 +17,7 @@ To run this multiclient server program, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/multiclient-server.git
+    git clone https://github.com/MRIDUL2206/Socket-Programming.git
     ```
 2. **Navigate to the project directory**:
     ```sh
