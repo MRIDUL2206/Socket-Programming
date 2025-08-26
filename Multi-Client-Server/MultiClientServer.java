@@ -27,7 +27,7 @@ class Pair<K, V> {
 
 public class MultiClientServer {
     private ServerSocket serverSocket;
-    private static HashMap<String,Pair<Socket,String>>hashMap;
+    private HashMap<String,Pair<Socket,String>>hashMap;
 
     public MultiClientServer(int port) {
         try{
@@ -66,7 +66,7 @@ public class MultiClientServer {
     }
 
     // ClientHandler class to handle communication with each client
-    private static class ClientHandler implements Runnable {
+    private class ClientHandler implements Runnable {
         private Socket clientSocket;
         private Socket recieverSocket;
         private String clientName;
