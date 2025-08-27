@@ -27,13 +27,13 @@ class Pair<K, V> {
 
 public class MultiClientServer {
     private ServerSocket serverSocket;
-    private HashMap<String,Pair<Socket,String>>hashMap;
-
+    private static HashMap<String,Pair<Socket,String>>hashMap= new HashMap<>();
+    // this will create a static hashmap that is shared across all instances of server hence supporting horizontal scaling
     public MultiClientServer(int port) {
         try{
             serverSocket = new ServerSocket(port);
             System.out.println("Server started");
-            hashMap = new HashMap<>();
+            // hashMap = new HashMap<>(); - this will create a new hashmap for each instance of server which is not needed
 
             while (true) {
                 System.out.println("Waiting for a client ...");
